@@ -268,6 +268,46 @@
 
  </main>
     
+        <!-- modal for creating new requests -->
+            <div class="modal fade" id="requestModal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">New Request</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="request-form">
+                                <div class="mb-3">
+                                    <label class="form-label">Type</label>
+                                    <select class="form-control" id="req-type" required>
+                                        <option value="Equipment">Equipment</option>
+                                        <option value="Leave">Leave</option>
+                                        <option value="Resources">Resources</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Items</label>
+                                    <div id="request-items">
+                                        <div class="input-group mb-2">
+                                            <input type="text" class="form-control item-name" 
+                                                placeholder="Item name" required>
+                                            <input type="number" class="form-control item-qty" 
+                                                placeholder="Qty" value="1" min="1" required>
+                                            <button type="button" class="btn btn-danger remove-item" disabled>×</button>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-sm btn-secondary" id="add-item-btn">
+                                        + Add Item
+                                    </button>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit Request</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
