@@ -31,6 +31,8 @@ body.is-admin .role-admin {
 
 .navbar {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+     padding-top: 1rem;     
+     padding-bottom: 1rem;
 }
 
 .navbar-brand {
@@ -45,6 +47,10 @@ body.is-admin .role-admin {
 
 .nav-link:hover {
     transform: translateY(-2px);
+}
+
+.navbar-nav {
+    align-items: center;
 }
 
 /* card shadow */

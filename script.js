@@ -82,7 +82,7 @@ function seedDatabase() {
             {
                 id: generateId(),
                 firstName: 'Admin',
-                lastName: 'User',
+                lastName: '',
                 email: 'admin@example.com',
                 password: 'Password123!',
                 role: 'Admin',
@@ -208,7 +208,9 @@ function setAuthState(isAuth, user = null) {
         }
 
         // update navbar with user name
-        document.getElementById('username-display').textContent = user.firstName + ' ' + user.lastName;
+        // update navbar with user name
+        const displayName = user.lastName ? user.firstName + ' ' + user.lastName : user.firstName;
+        document.getElementById('username-display').textContent = displayName;
     } else {
         // user is logged out
         body.classList.remove('authenticated', 'is-admin');
@@ -917,5 +919,5 @@ function showToast(message, type = 'info') {
     setTimeout(() => {
         toast.classList.remove('show');
         setTimeout(() => toast.remove(), 150);
-    }, 2000);
+    }, 2500);
 }
