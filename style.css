@@ -46,3 +46,53 @@ body.is-admin .role-admin {
 .nav-link:hover {
     transform: translateY(-2px);
 }
+
+/* card shadow */
+.card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* toast container for notifications */
+.toast-container {
+    position: fixed;
+    top: 90px;
+    left: 15px;
+    z-index: 9999;
+}
+
+/* badge styling */
+.badge {
+    font-size: 0.85em;
+}
+
+/* table font size */
+table {
+    font-size: 0.95em;
+}
+
+/* table actions - don't wrap */
+.table-actions {
+    white-space: nowrap;
+}
+
+/* smaller buttons in tables */
+.table-actions .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* request modal - item name field */
+.input-group .item-name {
+    flex: 2;
+}
+
+/* request modal - quantity field */
+.input-group .item-qty {
+    flex: 1;
+    max-width: 100px;
+}
+
+/* request modal - remove button */
+.input-group .remove-item {
+    width: 40px;
+}
