@@ -149,7 +149,124 @@
             </div>
         </section>
 
-    </main>
+         <!-- profile page -->
+        <section id="profile-page" class="page">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">My Profile</h2>
+                            <!-- js will put profile info here -->
+                            <div id="profile-content"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- employees page admin only -->
+        <section id="employees-page" class="page">
+            <h2>Employees</h2>
+            <button class="btn btn-success mb-3" id="add-employee-btn">+ Add Employee</button>
+            
+            <!-- table goes here -->
+            <div id="employees-list"></div>
+            
+            <!-- form for adding/editing employee -->
+            <div id="employee-form-container" class="card mt-3 d-none">
+                <div class="card-body">
+                    <h5>Add/Edit Employee</h5>
+                    <form id="employee-form">
+                        <div class="mb-3">
+                            <label class="form-label">Employee ID</label>
+                            <input type="text" class="form-control" id="emp-id" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">User Email</label>
+                            <input type="email" class="form-control" id="emp-email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Position</label>
+                            <input type="text" class="form-control" id="emp-position" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Department</label>
+                            <select class="form-control" id="emp-department" required></select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Hire Date</label>
+                            <input type="date" class="form-control" id="emp-hiredate" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-secondary" id="cancel-employee-btn">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+         <!-- departments page -->
+        <section id="departments-page" class="page">
+            <h2>Departments</h2>
+            <button class="btn btn-success mb-3" id="add-department-btn">+ Add Department</button>
+            
+            <div id="departments-list"></div>
+        </section>
+
+         <!-- accounts page -->
+        <section id="accounts-page" class="page">
+            <h2>Accounts</h2>
+            <button class="btn btn-success mb-3" id="add-account-btn">+ Add Account</button>
+            
+            <div id="accounts-list"></div>
+            
+            <!-- form for adding/editing accounts -->
+            <div id="account-form-container" class="card mt-3 d-none">
+                <div class="card-body">
+                    <h5>Add/Edit Account</h5>
+                    <form id="account-form">
+                        <div class="mb-3">
+                            <label class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="acc-firstname" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="acc-lastname" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="acc-email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" id="acc-password" minlength="6" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Role</label>
+                            <select class="form-control" id="acc-role" required>
+                                <option value="User">User</option>
+                                <option value="Admin">Admin</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="acc-verified">
+                            <label class="form-check-label" for="acc-verified">Verified</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-secondary" id="cancel-account-btn">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+         <!-- requests page -->
+        <section id="requests-page" class="page">
+            <h2>My Requests</h2>
+            <button class="btn btn-success mb-3" id="new-request-btn">+ New Request</button>
+            
+            <div id="requests-list"></div>
+        </section>
+
+ </main>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
